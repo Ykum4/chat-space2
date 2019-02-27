@@ -2,12 +2,13 @@
   .chat-side
     .side-header
       .side-header__box
-        %p.side-header__box__current-user-name tanaka3世
+        %p.side-header__box__current-user-name
+          = current_user.name
         %ul.side-header__box__menu
           %li.side-header__box__menu__edit-group
             = link_to fa_icon("edit"), ""
           %li.side-header__box__menu__edit-user
-            = link_to fa_icon("cog"), ""
+            = link_to fa_icon("cog"), edit_user_path(current_user)
     .groups
       = link_to "" do
         .group
