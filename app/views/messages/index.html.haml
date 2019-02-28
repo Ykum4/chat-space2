@@ -6,13 +6,14 @@
           = current_user.name
         %ul.side-header__box__menu
           %li.side-header__box__menu__edit-group
-            = link_to fa_icon("edit"), ""
+            = link_to fa_icon("edit"), "/groups/new"
           %li.side-header__box__menu__edit-user
             = link_to fa_icon("cog"), edit_user_path(current_user)
     .groups
       = link_to "" do
         .group
-          %p.group__group-name Sample_group
+          %p.group__group-name
+            Sample_group
           %p.group__latest-message メッセはねえぞ
   .chat-main
     .main-header
