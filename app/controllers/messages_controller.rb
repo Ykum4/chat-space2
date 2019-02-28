@@ -7,6 +7,14 @@ class MessagesController < ApplicationController
   end
 
   def create
+    @message = Message.new(message_params)
+    if @message.create
+    else
+    end
+  end
+
+  private
+  def message_params
   end
 
   def set_group
