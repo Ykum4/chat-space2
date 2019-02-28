@@ -1,0 +1,5 @@
+.chat-group-form
+  %h1 チャットグループ編集
+  / GroupsControllerでFindメソッドを使いidが何番のグループという情報を受け取っているのでnew.html.hamlの時と違い
+  /　Createメソッドが動くのではなくUpdateメソッドが呼ばれ編集される。
+  = render partial: 'form', locals: { group: @group }
