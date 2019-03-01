@@ -1,7 +1,7 @@
 class Message < ApplicationRecord
-  belongs_to :user_id
-  belongs_to :group_id
+  belongs_to :user
+  belongs_to :group
 
-  validates :content, presence: true, unless: :image?
   mount_uploader :image, ImageUploader
+  validates :content, presence: true, unless: :image?
 end
