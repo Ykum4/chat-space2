@@ -1,3 +1,5 @@
+# README
+
 **DB設計**
 
  ## usersテーブル
@@ -43,3 +45,8 @@
  ### Association
  - belongs_to :user
  - belongs_to :group
+
+
+
+
+
