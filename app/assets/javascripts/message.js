@@ -39,7 +39,7 @@ $(document).on('turbolinks:load', function(){
       $('#message_content').val('')
     })
     .fail(function(data){
-      alert('error');
+      alert('エラーが発生したためメッセージは送信できませんでした。');
     })
     .always(function(data){
       $('.submit-btn').prop('disabled', false);
