@@ -59,3 +59,4 @@ gem 'devise'
 gem 'pry-rails'
 gem 'carrierwave'
 gem 'mini_magick'
+gem "actionview", ">= 5.0.7.2"
