@@ -20,10 +20,6 @@ $(document).on('turbolinks:load', function(){
                 </div>`
   return html;
   }
-  var myfunc = function(form){
-    console.log(myfunc)
-    $(this).reset();
-  }
 
   $('#new_message').on('submit', function(e){
     e.preventDefault();
@@ -40,8 +36,7 @@ $(document).on('turbolinks:load', function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.messages').append(html);
-      myfunc();
-      // $('#message_content').val('');
+      $('#message_content')[0].reset();
     })
     .fail(function(data){
       alert('エラーが発生したためメッセージは送信できませんでした。');
