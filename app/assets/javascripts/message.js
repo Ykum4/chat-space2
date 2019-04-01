@@ -36,8 +36,9 @@ $(document).on('turbolinks:load', function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.messages').append(html);
-      $('#message_content').val();
+      $('#message_content').val('');
     })
+    
     .fail(function(data){
       alert('エラーが発生したためメッセージは送信できませんでした。');
     })
