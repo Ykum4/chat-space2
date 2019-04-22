@@ -1,44 +1,8 @@
 .wrapper
-  .chat-side
-    .side-header
-      .side-header__box
-        %p.side-header__box__current-user-name
-          = current_user.name
-        %ul.side-header__box__menu
-          %li.side-header__box__menu__edit-group
-            = link_to fa_icon("edit"), "/groups/new"
-          %li.side-header__box__menu__edit-user
-            = link_to fa_icon("cog"), edit_user_path(current_user)
-    .groups
-      - current_user.groups.each do |group|
-        = link_to "/groups/#{group.id}/messages" do
-          .group
-            %p.group__group-name
-              = group.name
-            %p.group__latest-message
-              = group.show_last_message
+  = render 'shared/chat-side'
   .chat-main
-    .main-header
-      .main-header__left-box
-        %h2.main-header__left-box__current-group
-          = @group.name
-        %ul.main-header__left-box__members
-          Member:
-          %br/
-          %li.main-header__left-box__members__member
-            = current_user.name
-      = link_to "/groups/#{@group.id}/edit" do
-        .main-header__edit-btn
-          Edit
+    = render 'shared/main-header'
     .messages
       = render @messages
       / 繰り返し処理が行われる時はcollectionを使わずに省略できる。
-
-    .form
-      = form_for [@group, @message] do |f|
-        .input-box
-          = f.text_field :content, class: "input-box__text", placeholder: "type a message"
-          = f.label :image, class: "input-box__image" do
-            = fa_icon 'image'
-            = f.file_field :image, class: "input-box__image__file"
-        = f.submit 'Send', class: "submit-btn"
+    = render 'shared/message-submit-form'

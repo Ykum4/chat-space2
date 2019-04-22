@@ -1,12 +1,16 @@
 @import "./reset";
 @import "font-awesome";
 @import "variable";
-@import "modules/chat-side";
-@import "modules/chat-side-groups";
-@import "modules/chat-main";
-@import "modules/main-header";
-@import "modules/messages";
-@import "modules/form";
-@import "modules/user";
 @import "modules/flash";
+@import "modules/user";
 @import "modules/group";
+
+// message画面
+@import 'message/chat-main';
+@import 'message/main-header';
+@import 'message/messages';
+@import 'message/message-submit-form';
+
+// chat-side画面
+@import "group/chat-side";
+@import "group/chat-side-groups";
