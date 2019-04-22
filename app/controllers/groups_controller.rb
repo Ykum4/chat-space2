@@ -21,8 +21,8 @@ class GroupsController < ApplicationController
   end
 
   def update
-    if @group.update
-      redirect_to "/groups/#{paramas[d]}/messages", notice: "グループが編集されました"
+    if @group.update(group_params)
+      redirect_to "/groups/#{params[:id]}/messages", notice: "グループが編集されました"
     else
       render :edit
     end
@@ -31,7 +31,6 @@ class GroupsController < ApplicationController
   private
   def group_params
     params.require(:group).permit(:name, { :user_ids => []})
-    # user_ids: []でも出来る？
   end
 
   def set_group
