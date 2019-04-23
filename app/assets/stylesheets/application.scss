@@ -3,7 +3,7 @@
 @import "variable";
 @import "modules/flash";
 @import "modules/user";
-@import "modules/group";
+
 
 // message画面
 @import 'message/chat-main';
@@ -14,3 +14,6 @@
 // chat-side画面
 @import "group/chat-side";
 @import "group/chat-side-groups";
+
+// group編集画面
+@import "modules/group-edit-form";
