@@ -11,10 +11,12 @@
       color: #333333;
     }
     &__members {
-      font-size: 12px;
-      color: $light-gray;
+      font-size: 15px;
       display: flex;
       padding-bottom: 10px;
+      &__member {
+        margin-left: 5px;
+      }
     }
   }
   a {
