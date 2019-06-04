@@ -10,12 +10,13 @@
           .field-label
             = f.label :email
           .field-input
-            = f.email_field :email, autofocus: true
-          .field
-            .field-label
-              = f.label :password
-              %i (英数字8文字以上)
-            .field-input
-              = f.password_field :password, autocomplete: "off"
-          .actions
-            = f.submit "Log in", class: 'btn'
+            = f.email_field :email, autofocus: true, value:'fff@gmail.com'
+        .field
+          .field-label
+            = f.label :password
+            %i (英数字8文字以上)
+          .field-input
+            = f.password_field :password, autocomplete: "off", value:'ffff1111'
+        %p 上記のmail/passでログイン出来ます
+        .actions
+          = f.submit "Log in", class: 'btn'
